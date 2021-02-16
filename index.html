@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./style/css/style.css"> -->
+    <link rel="stylesheet" href="./style/scss/style.css">
+    <script src="https://kit.fontawesome.com/f758d5de88.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>OhMyFood</title>
 </head>
 <body>
-    
+    <header>
+         <!-- <span class="iBack"><a href="#"><i class="fas fa-arrow-left"></i></a></span>         -->
+        <div class="logo">
+            <img src="images/logo/ohmyfood@2x.svg" alt="OhMyFood" id="imglogo">
+        </div>
+    </header>
+    <div class="sousheader geoloc">
+        <form class="blocksousheader"><span class="iGeo"><i class="fas fa-map-marker-alt"></i></span>
+            <input type="text" name="ville" id="geo_position" Value="Paris, Belleville" list="possibleville">
+            <datalist id="possibleville">
+                <option id="NSS" value="Paris, Neul-Sur-Sein">
+                <option id="BV" value="Paris, Beauville">
+               </datalist>
+            </input>
+        </form>
+    </div>
+    <div class="sousheader presentation">
+        <div class="blocksousheader">
+            <span class="l1">Réservez le menu qui vous convient</span>
+            <span class="l2">Découvrez des restorants d'exeption, sélectionnés par nos soins.</span>
+            <a href="#"><div id="explorerResto">Explorer nos restaurants</div></a>
+        </div>
+    </div>
 </body>
 </html>

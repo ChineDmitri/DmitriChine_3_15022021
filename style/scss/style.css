@@ -1,0 +1,172 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.iBack {
+  font-size: 2vh;
+  position: absolute;
+  left: 2vh;
+}
+
+@media screen and (min-width: 600px) {
+  .iBack {
+    left: 1vw;
+  }
+}
+
+.iBack a {
+  color: black;
+}
+
+.iGeo {
+  position: relative;
+  color: #353535;
+  font-size: 2.5vh;
+}
+
+#imglogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 6vh;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header .logo {
+  margin: 1vh 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 600px) {
+  header {
+    width: 600px;
+  }
+}
+
+.sousheader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  font-size: 4.5vh;
+}
+
+.geoloc {
+  background-color: #eaeaea;
+  font-weight: 600;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.presentation {
+  background-color: #f6f6f6;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.blocksousheader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: inherit;
+  -webkit-box-direction: inherit;
+      -ms-flex-direction: inherit;
+          flex-direction: inherit;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2vh 0;
+  width: 100%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 600px) {
+  .blocksousheader {
+    width: 600px;
+  }
+}
+
+.blocksousheader .l1 {
+  margin: 2vh 0;
+  font-weight: 900;
+  width: 70%;
+  font-size: 3vh;
+}
+
+.blocksousheader .l2 {
+  margin: 2vh 0;
+  font-weight: 400;
+  width: 90%;
+  font-size: 2.5vh;
+}
+
+.blocksousheader #explorerResto {
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
+  background: linear-gradient(360deg, #9356dc, #ff79da);
+  font-size: 2.2vh;
+  font-weight: 500;
+  margin: 2vh 0;
+  padding: 2vh 3vh;
+  border-radius: 3vh;
+}
+
+.blocksousheader a {
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  color: white;
+}
+
+#geo_position {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #eaeaea;
+  border: none;
+  outline: none;
+  font-size: 2.5vh;
+  font-weight: 700;
+  text-align: center;
+  color: #353535;
+  width: 55%;
+}
+
+@media screen and (min-width: 600px) {
+  #geo_position {
+    width: 50%;
+  }
+}
+
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

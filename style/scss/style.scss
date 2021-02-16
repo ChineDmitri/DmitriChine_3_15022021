@@ -1,0 +1,138 @@
+$moitier: 60%;
+$marginItemSousheader: 2vh 0;
+$GrandEcrans: 600px;
+$ColorGeoVille: #353535;
+$ColorBgVille: #eaeaea;
+$ColorBgPresent: #f6f6f6;
+$ColorPremier: #9356dc;
+$ColorSecond: #ff79da;
+$COlorTertiaire: #99e2d0;
+
+@mixin aligncenterblock {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.iBack {
+  font-size: 2vh;
+  position: absolute;
+  @media screen and (min-width: 600px) {
+    left: 1vw; 
+  }
+  left: 2vh;
+  a {
+    color: black;
+  }
+}
+
+.iGeo {
+  position: relative;
+  color: $ColorGeoVille;
+  font-size: 2.5vh;
+  // margin-right: 3vh;
+}
+
+#imglogo {
+  display: flex;
+  align-items: center;
+  height: 6vh;
+  max-width: 80%;
+  @include aligncenterblock;
+}
+
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  @include aligncenterblock;
+  .logo {
+    margin: 1vh 0;
+    @include aligncenterblock;
+  }
+  @media screen and (min-width: $GrandEcrans) {
+    width: $GrandEcrans;
+  }
+}
+
+.sousheader {
+  display: flex;
+  width: 100%;
+  font-size: 4.5vh;
+}
+
+.geoloc {
+  background-color: $ColorBgVille;
+  font-weight: 600;
+  flex-direction: row;
+}
+
+.presentation {
+  background-color: $ColorBgPresent;
+  flex-direction: column;
+}
+
+.blocksousheader {
+  display: flex;
+  flex-direction: inherit;
+  align-items: center;
+  padding: 2vh 0;
+  width: 100%;
+  @media screen and (min-width: $GrandEcrans) {
+    width: $GrandEcrans;
+  }
+  text-align: center;
+  @include aligncenterblock;
+  justify-content: center;
+  .l1 {
+    margin: $marginItemSousheader;
+    font-weight: 900;
+    width: 70%;
+    font-size: 3vh;
+  }
+  .l2 {
+    margin: $marginItemSousheader;
+    font-weight: 400;
+    width: 90%;
+    font-size: 2.5vh;
+  }
+  #explorerResto {
+    background: linear-gradient(360deg, $ColorPremier, $ColorSecond);
+    font-size: 2.2vh;
+    font-weight: 500;
+    margin: $marginItemSousheader;
+    padding: 2vh 3vh;
+    border-radius: 3vh;
+  }
+  a {
+    @include aligncenterblock;
+    text-decoration: none;
+    color: white;
+  }
+}
+
+// DEBUT CHOIX VILLE
+#geo_position {
+  display: flex;
+  background-color: $ColorBgVille;
+  border: none;
+  outline: none;
+  font-size: 2.5vh;
+  font-weight: 700;
+  text-align: center;
+  color: $ColorGeoVille;
+  width: 55%;
+  @media screen and (min-width: $GrandEcrans) {
+    width: 50%;
+  }
+}
+
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+// FIN DEBUT CHOIX
