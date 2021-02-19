@@ -256,6 +256,11 @@ li:before {
   color: black;
 }
 
+.divMenuResto a:hover + img {
+  -o-object-position: 1px 1px;
+     object-position: 1px 1px;
+}
+
 .titleMenu {
   margin: 3vh;
   font-size: 3vh;
@@ -278,18 +283,7 @@ li:before {
           box-shadow: 0 0 5px 2px #ebebeb;
 }
 
-.labelNew {
-  position: absolute;
-  background-color: #99E2D0;
-  color: #068B6B;
-  padding: 1vh 2vh;
-  border-radius: 0.5vh;
-  font-size: 2vh;
-  right: 2vh;
-  top: 2vh;
-}
-
-.imgCarte img {
+.carteResto img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -300,14 +294,20 @@ li:before {
           transition-duration: 2s;
 }
 
-.imgCarte img:focus {
-  -o-object-position: 0 0;
-     object-position: 0 0;
+.carteResto:hover img {
+  -o-object-position: 1px 1px;
+     object-position: 1px 1px;
 }
 
-.imgCarte img:hover {
-  -o-object-position: 0 0;
-     object-position: 0 0;
+.labelNew {
+  position: absolute;
+  background-color: #99E2D0;
+  color: #068B6B;
+  padding: 1vh 2vh;
+  border-radius: 0.5vh;
+  font-size: 2vh;
+  right: 2vh;
+  top: 2vh;
 }
 
 .discription {
