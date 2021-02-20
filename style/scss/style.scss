@@ -282,3 +282,46 @@ li {
   margin: 0.5vh 0;
   font-size: 2.5vh;
 }
+
+footer {
+  width: 100%;
+  background-color: #353535;
+  color: white;
+  font-size: 2vh;
+  font-weight: 400px;
+  img {
+    margin: 3vh;
+    width: 30%;
+    filter: invert(100%); 
+  }
+}
+
+.divBlock {
+  padding: 1vh 0 4vh 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  @include aligncenterblock;
+  @media screen and (min-width: 600px) {
+    width: 600px;  
+  }
+}
+
+.linkFooter {
+  flex-grow: 0;
+  flex-basis: 1;
+  margin: 0.5vh 3vh;
+  color: white;
+  a {
+    text-decoration: none;
+    color: white;
+    &:hover {
+      color: $ColorPremier;
+    } 
+  }
+  .withIco {
+    position: absolute;
+    left: 7vh;
+  }
+}
+
