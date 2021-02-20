@@ -13,6 +13,10 @@ $COlorTertiaire: #99e2d0;
   margin-right: auto;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -193,7 +197,7 @@ li {
     color: black;
 }
 
-.menuResto {
+#menuResto {
   background-color: #f6f6f6;
   padding: 3vh 0;
 }

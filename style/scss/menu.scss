@@ -1,0 +1,59 @@
+$moitier: 60%;
+$marginItemSousheader: 2vh 0;
+$GrandEcrans: 600px;
+$ColorGeoVille: #353535;
+$ColorBgVille: #eaeaea;
+$ColorBgPresent: #f6f6f6;
+$ColorPremier: #9356dc;
+$ColorSecond: #ff79da;
+$COlorTertiaire: #99e2d0;
+
+@mixin aligncenterblock {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.iBack {
+  font-size: 2vh;
+  position: absolute;
+  @media screen and (min-width: 600px) {
+    left: 1vw;
+  }
+  left: 2vh;
+  a {
+    color: black;
+  }
+}
+
+#imglogo {
+    display: flex;
+    align-items: center;
+    height: 6vh;
+    max-width: 80%;
+    @include aligncenterblock;
+  }
+  
+  header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    @include aligncenterblock;
+    .logo {
+      margin: 1vh 0;
+      @include aligncenterblock;
+    }
+    @media screen and (min-width: $GrandEcrans) {
+      width: $GrandEcrans;
+    }
+  }
+  
