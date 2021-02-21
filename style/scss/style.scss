@@ -199,7 +199,7 @@ li {
 
 #menuResto {
   background-color: #f6f6f6;
-  padding: 3vh 0;
+  padding: 5vh 0;
 }
 
 .divMenuResto {
@@ -311,9 +311,7 @@ footer {
   }
 }
 
-.linkFooter {
-  flex-grow: 0;
-  flex-basis: 1;
+.linkFooter, .titleShrikhand  {
   margin: 0.5vh 3vh;
   color: white;
   a {
@@ -329,3 +327,7 @@ footer {
   }
 }
 
+.titleShrikhand {
+  font-family: 'Shrikhand', cursive;
+  font-size: 4vh;
+}

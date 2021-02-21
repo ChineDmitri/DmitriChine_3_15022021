@@ -55,9 +55,9 @@ header .logo {
   margin-right: auto;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
   header {
-    width: 600px;
+    width: 700px;
   }
 }
 /*# sourceMappingURL=menu.css.map */
