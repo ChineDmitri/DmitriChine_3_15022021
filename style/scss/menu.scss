@@ -143,7 +143,9 @@ body {
   height: 0.5vh;
 }
 
+$TflashBoxLeft: 800ms;
 .epd {
+  overflow: hidden; /* pour voir functionnement fait commentaire */
   position: relative;
   display: flex;
   flex-direction: column;
@@ -152,16 +154,25 @@ body {
   background-color: white;
   border-radius: 3vh;
   box-shadow: 0 0 6px 3px #E6E6E6;
+  transition-duration: $TflashBoxLeft;
   .titre1 {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
     margin-bottom: 0.5vh;
     font-size: 2.5vh;
     font-weight: 600;
     width: 100%;
+    transition-duration: $TflashBoxLeft;
   }
   .titre2 {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-size: 2.1vh;
     font-weight: 400;
     width: 85%;
+    transition-duration: $TflashBoxLeft;
   }
   .prix {
     font-size: 2.5vh;
@@ -169,6 +180,51 @@ body {
     position: absolute;
     right: 2vh;
     bottom: 2vh;
+    transition-duration: $TflashBoxLeft;
+  }
+  $SflashBoxLeft: 12vh;
+  .flashBoxLeft {
+    // object-position: right center;
+    position: absolute;
+    visibility: visible;
+    display: flex;
+    float: right;
+    width: $SflashBoxLeft;
+    height: 101%;
+    margin-right: -$SflashBoxLeft;
+    top: 0;
+    right: 0;
+    align-items: center;
+    justify-content: space-around;
+    background-color: $ColorTertiaire;
+    color: white;
+    transition-duration: $TflashBoxLeft;
+    border-top-right-radius: 3vh;
+    border-bottom-right-radius: 3vh;
+    i {
+      font-size: 4vh;
+    }
+  }
+  &:hover .flashBoxLeft {
+    transform: translateX(-1vh);
+    margin-right: -1vh;
+    border-top-right-radius: 3vh;
+    border-bottom-right-radius: 3vh;
+  }
+  &:hover .prix {
+      right: calc(#{$SflashBoxLeft} + 2vh);
+    }
+  &:hover .titre2 {
+    width: 65%;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+    overflow: hidden;
+  }
+  &:hover .titre1 {
+    width: 80%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 }
 

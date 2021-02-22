@@ -167,6 +167,8 @@ header .logo {
 }
 
 .epd {
+  overflow: hidden;
+  /* pour voir functionnement fait commentaire */
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -181,19 +183,31 @@ header .logo {
   border-radius: 3vh;
   -webkit-box-shadow: 0 0 6px 3px #E6E6E6;
           box-shadow: 0 0 6px 3px #E6E6E6;
+  -webkit-transition-duration: 800ms;
+          transition-duration: 800ms;
 }
 
 .epd .titre1 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin-bottom: 0.5vh;
   font-size: 2.5vh;
   font-weight: 600;
   width: 100%;
+  -webkit-transition-duration: 800ms;
+          transition-duration: 800ms;
 }
 
 .epd .titre2 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 2.1vh;
   font-weight: 400;
   width: 85%;
+  -webkit-transition-duration: 800ms;
+          transition-duration: 800ms;
 }
 
 .epd .prix {
@@ -202,6 +216,63 @@ header .logo {
   position: absolute;
   right: 2vh;
   bottom: 2vh;
+  -webkit-transition-duration: 800ms;
+          transition-duration: 800ms;
+}
+
+.epd .flashBoxLeft {
+  position: absolute;
+  visibility: visible;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: right;
+  width: 12vh;
+  height: 101%;
+  margin-right: -12vh;
+  top: 0;
+  right: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #99e2d0;
+  color: white;
+  -webkit-transition-duration: 800ms;
+          transition-duration: 800ms;
+  border-top-right-radius: 3vh;
+  border-bottom-right-radius: 3vh;
+}
+
+.epd .flashBoxLeft i {
+  font-size: 4vh;
+}
+
+.epd:hover .flashBoxLeft {
+  -webkit-transform: translateX(-1vh);
+          transform: translateX(-1vh);
+  margin-right: -1vh;
+  border-top-right-radius: 3vh;
+  border-bottom-right-radius: 3vh;
+}
+
+.epd:hover .prix {
+  right: calc(12vh + 2vh);
+}
+
+.epd:hover .titre2 {
+  width: 65%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.epd:hover .titre1 {
+  width: 80%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 #command {
