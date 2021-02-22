@@ -97,8 +97,8 @@ body {
 }
 
 #addCarte:focus .iLike {
-  -webkit-text-stroke: 1px white;
-  font-size: 3.5vh;
+  -webkit-text-stroke: 0.1vh white;
+  transform: scale(1.25);
   background: linear-gradient(180deg, $ColorPremier, $ColorSecond);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -111,11 +111,11 @@ body {
   right: 2vh;
   font-size: 3vh;
   color: white;
-  -webkit-text-stroke: 1px black;
-  transition: 400ms;
+  -webkit-text-stroke: 0.1vh black;
+  transition: 600ms;
   &:hover {
-    -webkit-text-stroke: 1px white;
-    font-size: 3.5vh;
+    -webkit-text-stroke: 0.1vh white;
+    transform: scale(1.25);
     background: linear-gradient(180deg, $ColorPremier, $ColorSecond);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
