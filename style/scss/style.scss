@@ -1,17 +1,6 @@
-$moitier: 60%;
-$marginItemSousheader: 2vh 0;
-$GrandEcrans: 600px;
-$ColorGeoVille: #353535;
-$ColorBgVille: #eaeaea;
-$ColorBgPresent: #f6f6f6;
-$ColorPremier: #9356dc;
-$ColorSecond: #ff79da;
-$COlorTertiaire: #99e2d0;
+@import "_variables.scss";
+@import "_mixin.scss";
 
-@mixin aligncenterblock {
-  margin-left: auto;
-  margin-right: auto;
-}
 
 html {
   scroll-behavior: smooth;
@@ -273,14 +262,7 @@ li {
   margin: 2vh;
 }
 
-.iLike {
-  position: absolute;
-  bottom: 25%;
-  right: 2vh;
-  font-size: 3vh;
-  color: white;
-  -webkit-text-stroke: 1px black;
-}
+@include addLike;
 
 .titleCarte, .titleResto {
   margin: 0.5vh 0;

@@ -326,13 +326,39 @@ li:before {
   margin: 2vh;
 }
 
+.addCarte:focus .iLike {
+  -webkit-text-stroke: 0.1vh #f6f6f6;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background: linear-gradient(180deg, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #9356dc;
+}
+
 .iLike {
   position: absolute;
-  bottom: 25%;
-  right: 2vh;
+  bottom: 2vh;
+  right: 4vh;
   font-size: 3vh;
   color: white;
-  -webkit-text-stroke: 1px black;
+  -webkit-text-stroke: 0.1vh black;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+.iLike:hover {
+  -webkit-text-stroke: 0.1vh #f6f6f6;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background: linear-gradient(180deg, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #9356dc;
 }
 
 .titleCarte, .titleResto {

@@ -1,17 +1,5 @@
-$moitier: 60%;
-$marginItemSousheader: 2vh 0;
-$GrandEcrans: 600px;
-$ColorGeoVille: #353535;
-$ColorBgVille: #eaeaea;
-$ColorBgPresent: #f6f6f6;
-$ColorPremier: #9356dc;
-$ColorSecond: #ff79da;
-$ColorTertiaire: #99e2d0;
-
-@mixin aligncenterblock {
-  margin-left: auto;
-  margin-right: auto;
-}
+@import "_variables.scss";
+@import "_mixin.scss";
 
 html {
     scroll-behavior: smooth;
@@ -96,34 +84,7 @@ body {
   }
 }
 
-#addCarte:focus .iLike {
-  -webkit-text-stroke: 0.1vh white;
-  transform: scale(1.5);
-
-  background: linear-gradient(180deg, $ColorPremier, $ColorSecond);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: $ColorPremier;
-}
-
-.iLike {
-  position: absolute;
-  top: 4vh;
-  right: 2vh;
-  font-size: 3vh;
-  color: white;
-  -webkit-text-stroke: 0.1vh black;
-  transition: 600ms;
-  transform-origin: 50% 50%;
-  &:hover {
-    -webkit-text-stroke: 0.1vh white;
-    transform: scale(1.5);
-    background: linear-gradient(180deg, $ColorPremier, $ColorSecond);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: $ColorPremier;
-  }
-}
+@include addLike;
 
 $Tdecouvrire: 3s;
 #entrees, #plat, #desserts {

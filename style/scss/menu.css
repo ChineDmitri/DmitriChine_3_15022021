@@ -111,8 +111,8 @@ header .logo {
   color: white;
 }
 
-#addCarte:focus .iLike {
-  -webkit-text-stroke: 0.1vh white;
+.addCarte:focus .iLike {
+  -webkit-text-stroke: 0.1vh #f6f6f6;
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
   background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
@@ -124,8 +124,8 @@ header .logo {
 
 .iLike {
   position: absolute;
-  top: 4vh;
-  right: 2vh;
+  bottom: 2vh;
+  right: 4vh;
   font-size: 3vh;
   color: white;
   -webkit-text-stroke: 0.1vh black;
@@ -136,7 +136,7 @@ header .logo {
 }
 
 .iLike:hover {
-  -webkit-text-stroke: 0.1vh white;
+  -webkit-text-stroke: 0.1vh #f6f6f6;
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
   background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
