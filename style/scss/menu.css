@@ -113,8 +113,8 @@ header .logo {
 
 #addCarte:focus .iLike {
   -webkit-text-stroke: 0.1vh white;
-  -webkit-transform: scale(1.25);
-          transform: scale(1.25);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
   background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
   background: linear-gradient(180deg, #9356dc, #ff79da);
   -webkit-background-clip: text;
@@ -131,12 +131,14 @@ header .logo {
   -webkit-text-stroke: 0.1vh black;
   -webkit-transition: 600ms;
   transition: 600ms;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
 }
 
 .iLike:hover {
   -webkit-text-stroke: 0.1vh white;
-  -webkit-transform: scale(1.25);
-          transform: scale(1.25);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
   background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
   background: linear-gradient(180deg, #9356dc, #ff79da);
   -webkit-background-clip: text;
@@ -145,7 +147,27 @@ header .logo {
 }
 
 #entrees, #plat, #desserts {
+  -webkit-animation: decouvrire 3s;
+          animation: decouvrire 3s;
   margin-bottom: 5vh;
+}
+
+@-webkit-keyframes decouvrire {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes decouvrire {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 #entrees h2, #plat h2, #desserts h2 {
@@ -167,6 +189,8 @@ header .logo {
 }
 
 .epd {
+  -webkit-animation: SlideTop 1.5s;
+          animation: SlideTop 1.5s;
   overflow: hidden;
   /* pour voir functionnement fait commentaire */
   position: relative;
@@ -185,6 +209,24 @@ header .logo {
           box-shadow: 0 0 6px 3px #E6E6E6;
   -webkit-transition-duration: 800ms;
           transition-duration: 800ms;
+}
+
+@-webkit-keyframes SlideTop {
+  from {
+    margin: 3vh 0;
+  }
+  to {
+    margin: 2vh 0;
+  }
+}
+
+@keyframes SlideTop {
+  from {
+    margin: 3vh 0;
+  }
+  to {
+    margin: 2vh 0;
+  }
 }
 
 .epd .titre1 {
@@ -228,7 +270,7 @@ header .logo {
   display: flex;
   float: right;
   width: 12vh;
-  height: 101%;
+  height: 105%;
   margin-right: -12vh;
   top: 0;
   right: 0;
@@ -241,8 +283,6 @@ header .logo {
   color: white;
   -webkit-transition-duration: 800ms;
           transition-duration: 800ms;
-  border-top-right-radius: 3vh;
-  border-bottom-right-radius: 3vh;
 }
 
 .epd .flashBoxLeft i {
@@ -253,8 +293,6 @@ header .logo {
   -webkit-transform: translateX(-1vh);
           transform: translateX(-1vh);
   margin-right: -1vh;
-  border-top-right-radius: 3vh;
-  border-bottom-right-radius: 3vh;
 }
 
 .epd:hover .prix {
@@ -273,6 +311,35 @@ header .logo {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+
+.epd:hover i {
+  -webkit-animation-name: validateur;
+          animation-name: validateur;
+  -webkit-animation-duration: 800ms;
+          animation-duration: 800ms;
+}
+
+@-webkit-keyframes validateur {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+
+@keyframes validateur {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
 }
 
 #command {

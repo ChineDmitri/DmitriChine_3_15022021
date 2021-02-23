@@ -98,7 +98,8 @@ body {
 
 #addCarte:focus .iLike {
   -webkit-text-stroke: 0.1vh white;
-  transform: scale(1.25);
+  transform: scale(1.5);
+
   background: linear-gradient(180deg, $ColorPremier, $ColorSecond);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -113,9 +114,10 @@ body {
   color: white;
   -webkit-text-stroke: 0.1vh black;
   transition: 600ms;
+  transform-origin: 50% 50%;
   &:hover {
     -webkit-text-stroke: 0.1vh white;
-    transform: scale(1.25);
+    transform: scale(1.5);
     background: linear-gradient(180deg, $ColorPremier, $ColorSecond);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -123,7 +125,13 @@ body {
   }
 }
 
+$Tdecouvrire: 3s;
 #entrees, #plat, #desserts {
+  animation: decouvrire $Tdecouvrire;
+  @keyframes decouvrire {
+    from { opacity: 0;}
+    to { opacity: 1;}
+    }
   margin-bottom: 5vh;
   h2 {
     text-transform: uppercase;
@@ -145,6 +153,11 @@ body {
 
 $TflashBoxLeft: 800ms;
 .epd {
+  animation: SlideTop 1.5s;
+  @keyframes SlideTop {
+    from {margin: 3vh 0;}
+    to {margin: 2vh 0;}
+  }
   overflow: hidden; /* pour voir functionnement fait commentaire */
   position: relative;
   display: flex;
@@ -190,7 +203,7 @@ $TflashBoxLeft: 800ms;
     display: flex;
     float: right;
     width: $SflashBoxLeft;
-    height: 101%;
+    height: 105%;
     margin-right: -$SflashBoxLeft;
     top: 0;
     right: 0;
@@ -199,17 +212,14 @@ $TflashBoxLeft: 800ms;
     background-color: $ColorTertiaire;
     color: white;
     transition-duration: $TflashBoxLeft;
-    border-top-right-radius: 3vh;
-    border-bottom-right-radius: 3vh;
     i {
-      font-size: 4vh;
-    }
-  }
+      font-size: 4vh; 
+    }     
+  } 
+
   &:hover .flashBoxLeft {
     transform: translateX(-1vh);
     margin-right: -1vh;
-    border-top-right-radius: 3vh;
-    border-bottom-right-radius: 3vh;
   }
   &:hover .prix {
       right: calc(#{$SflashBoxLeft} + 2vh);
@@ -225,7 +235,15 @@ $TflashBoxLeft: 800ms;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+  }  
+  &:hover i {
+    animation-name: validateur;
+    animation-duration: $TflashBoxLeft ;
   }
+  @keyframes validateur {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(1turn);}
+   }
 }
 
 #command {
