@@ -1,0 +1,22 @@
+
+@mixin SliderTop {
+    @keyframes SlideTop {
+        from {margin: 3vh 0;}
+        to {margin: 2vh 0;}
+      }
+}
+
+@mixin decouvrire {
+    @keyframes decouvrire {
+        from { opacity: 0;}
+        to { opacity: 1;}
+        } 
+}
+
+
+@mixin validateur {
+    @keyframes validateur {
+        from {transform: rotate(0deg);}
+        to {transform: rotate(1turn);}
+       }
+}

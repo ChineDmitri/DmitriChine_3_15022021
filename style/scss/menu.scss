@@ -1,5 +1,6 @@
 @import "_variables.scss";
 @import "_mixin.scss";
+@import "_keyframes.scss";
 
 html {
     scroll-behavior: smooth;
@@ -89,10 +90,7 @@ body {
 $Tdecouvrire: 3s;
 #entrees, #plat, #desserts {
   animation: decouvrire $Tdecouvrire;
-  @keyframes decouvrire {
-    from { opacity: 0;}
-    to { opacity: 1;}
-    }
+  @include decouvrire;
   margin-bottom: 5vh;
   h2 {
     text-transform: uppercase;
@@ -111,14 +109,10 @@ $Tdecouvrire: 3s;
   width: 8vh;
   height: 0.5vh;
 }
-
-$TflashBoxLeft: 800ms;
+ 
 .epd {
   animation: SlideTop 1.5s;
-  @keyframes SlideTop {
-    from {margin: 3vh 0;}
-    to {margin: 2vh 0;}
-  }
+  @include SliderTop; /* KEYFRAME POUR SliderTop */
   overflow: hidden; /* pour voir functionnement fait commentaire */
   position: relative;
   display: flex;
@@ -156,7 +150,7 @@ $TflashBoxLeft: 800ms;
     bottom: 2vh;
     transition-duration: $TflashBoxLeft;
   }
-  $SflashBoxLeft: 12vh;
+  
   .flashBoxLeft {
     // object-position: right center;
     position: absolute;
@@ -201,10 +195,7 @@ $TflashBoxLeft: 800ms;
     animation-name: validateur;
     animation-duration: $TflashBoxLeft ;
   }
-  @keyframes validateur {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(1turn);}
-   }
+  @include validateur;
 }
 
 #command {

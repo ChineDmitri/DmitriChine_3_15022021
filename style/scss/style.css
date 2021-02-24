@@ -1,3 +1,6 @@
+@charset "UTF-8";
+/* width dans le FlashBoxLeft */
+/* duration du block validation avec l'icône check-circle sortant de gauche */
 html {
   scroll-behavior: smooth;
 }

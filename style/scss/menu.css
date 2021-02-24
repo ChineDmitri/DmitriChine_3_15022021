@@ -1,3 +1,6 @@
+@charset "UTF-8";
+/* width dans le FlashBoxLeft */
+/* duration du block validation avec l'icône check-circle sortant de gauche */
 html {
   scroll-behavior: smooth;
 }
@@ -200,6 +203,7 @@ header .logo {
 .epd {
   -webkit-animation: SlideTop 1.5s;
           animation: SlideTop 1.5s;
+  /* KEYFRAME POUR SliderTop */
   overflow: hidden;
   /* pour voir functionnement fait commentaire */
   position: relative;
