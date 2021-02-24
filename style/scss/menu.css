@@ -112,9 +112,9 @@ header .logo {
 }
 
 .addCarte:focus .iLike {
-  -webkit-text-stroke: 0.1vh #f6f6f6;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  -webkit-text-stroke: 0vh white;
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
   background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
   background: linear-gradient(180deg, #9356dc, #ff79da);
   -webkit-background-clip: text;
@@ -124,9 +124,6 @@ header .logo {
 
 .iLike {
   position: absolute;
-  bottom: 2vh;
-  right: 4vh;
-  font-size: 3vh;
   color: white;
   -webkit-text-stroke: 0.1vh black;
   -webkit-transition: 600ms;
@@ -136,14 +133,26 @@ header .logo {
 }
 
 .iLike:hover {
-  -webkit-text-stroke: 0.1vh #f6f6f6;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  -webkit-text-stroke: 0vh white;
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
   background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
   background: linear-gradient(180deg, #9356dc, #ff79da);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: #9356dc;
+}
+
+.main {
+  bottom: 2vh;
+  right: 4vh;
+  font-size: 3vh;
+}
+
+.menu {
+  top: 3.5vh;
+  right: 3vh;
+  font-size: 4vh;
 }
 
 #entrees, #plat, #desserts {
