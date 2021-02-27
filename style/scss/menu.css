@@ -78,10 +78,18 @@ header .logo {
 }
 
 .carte {
-  position: relative;
-  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  z-index: 2;
   display: flex;
   background-color: #f6f6f6;
   border-top-left-radius: 4vh;
@@ -100,7 +108,16 @@ header .logo {
 .carte .carteBox {
   position: relative;
   margin: 0 3vh;
-  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: inherit;
+  -webkit-box-direction: inherit;
+      -ms-flex-direction: inherit;
+          flex-direction: inherit;
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
 }
 
 .carte h1 {
@@ -112,6 +129,24 @@ header .logo {
 .carte a {
   text-decoration: none;
   color: white;
+}
+
+.carte button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: bottom;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
+  background: linear-gradient(360deg, #9356dc, #ff79da);
+  padding: 2vh 8vw 1.8vh 8vw;
+  border-radius: 3vh;
+  font-size: 2.2vh;
+  font-weight: 600;
+  margin: 5vh auto 10vh auto;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .addCarte:focus .iLike {
@@ -353,25 +388,6 @@ header .logo {
     -webkit-transform: rotate(1turn);
             transform: rotate(1turn);
   }
-}
-
-#command {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
-  background: linear-gradient(360deg, #9356dc, #ff79da);
-  font-size: 2.2vh;
-  font-weight: 500;
-  margin: 5vh auto 10vh auto;
-  padding: 2vh 3vh;
-  border-radius: 3vh;
-  width: 35%;
 }
 
 footer {

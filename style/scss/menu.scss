@@ -62,6 +62,9 @@ body {
     width: $GrandEcrans;
     @include aligncenterblock;
   }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
   z-index: 2;
   display: flex;
@@ -72,7 +75,9 @@ body {
   .carteBox {
     position: relative;
     margin: 0 3vh;
-    width: 100%;
+    display: flex;
+    flex-direction: inherit;
+    justify-content: inherit;
   }
   h1 {
     margin: 3vh 0;
@@ -82,6 +87,20 @@ body {
   a {
     text-decoration: none;
     color: white;
+  }
+  button {
+    display: flex;
+    vertical-align: bottom;
+    background: linear-gradient(360deg, $ColorPremier, $ColorSecond);
+    padding: 2vh 8vw 1.8vh 8vw;
+    border-radius: 3vh;
+    font-size: 2.2vh;
+    font-weight: 600;
+    margin: 5vh auto 10vh auto;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
   }
 }
 
@@ -191,27 +210,12 @@ $Tdecouvrire: 3s;
     white-space: nowrap;
     overflow: hidden;
   }  
-  &:hover i {
+  &:hover i { 
     animation-name: validateur;
     animation-duration: $TflashBoxLeft ;
   }
   @include validateur;
 }
-
-#command {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background: linear-gradient(360deg, $ColorPremier, $ColorSecond);
-  font-size: 2.2vh;
-  font-weight: 500;
-  margin: 5vh auto 10vh auto;
-  padding: 2vh 3vh;
-  border-radius: 3vh;
-  width: 35%;
-}
-
-
 
 footer {
   width: 100%;

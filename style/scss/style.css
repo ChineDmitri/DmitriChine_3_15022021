@@ -153,6 +153,20 @@ header .logo {
   border-radius: 3vh;
 }
 
+.blocksousheader button {
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
+  background: linear-gradient(360deg, #9356dc, #ff79da);
+  padding: 2vh 5vw 1.8vh 5vw;
+  border-radius: 3vh;
+  font-size: 2.2vh;
+  font-weight: 600;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 2vh 0;
+}
+
 .blocksousheader a {
   margin-left: auto;
   margin-right: auto;
