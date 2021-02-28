@@ -22,13 +22,23 @@
         </div>
     </header>
     <div class="sousheader geoloc">
-        <form class="blocksousheader"><span class="iGeo"><i class="fas fa-map-marker-alt"></i></span>
-            <input type="text" name="ville" id="geo_position" Value="Paris, Belleville" list="possibleville">
+        <form class="blocksousheader">
+            <span class="iGeo"><i class="fas fa-map-marker-alt"></i></span>
+            <input 
+                type="text" 
+                name="city" 
+                id="geo_position" 
+                Value="Paris, Belleville" 
+                list="possibleville" 
+                required pattern="Paris, Belleville|Paris, Villette|Paris, Grandes-Carrières"
+            >
             <datalist id="possibleville">
-                <option id="NSS" value="Paris, Neul-Sur-Sein">
-                <option id="BV" value="Paris, Beauville">
+                <option id="BV" value="Paris, Belleville"> 
+                <option id=V" value="Paris, Villette">
+                <option id="GC" value="Paris, Grandes-Carrières">   
             </datalist>
             <!-- </input> -->
+            
         </form>
     </div>
     <div class="sousheader presentation">

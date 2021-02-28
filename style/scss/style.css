@@ -27,6 +27,7 @@ body {
 }
 
 .iGeo {
+  margin-right: 1vh;
   position: relative;
   color: #353535;
   font-size: 2.5vh;
@@ -174,7 +175,8 @@ header .logo {
   color: white;
 }
 
-#geo_position {
+.blocksousheader input {
+  border-radius: 2vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -186,15 +188,21 @@ header .logo {
   text-align: center;
   color: #353535;
   width: 55%;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
 }
 
 @media screen and (min-width: 600px) {
-  #geo_position {
+  .blocksousheader input {
     width: 50%;
   }
 }
 
-input::-webkit-calendar-picker-indicator {
+.blocksousheader input:not(:focus):invalid {
+  background-color: #FF8585;
+}
+
+.blocksousheader input::-webkit-calendar-picker-indicator {
   display: none;
 }
 
