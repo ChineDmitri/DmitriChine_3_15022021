@@ -20,3 +20,27 @@
         to {transform: rotate(1turn);}
        }
 }
+
+@mixin loader {
+@keyframes loader {
+    0% {opacity: 1; z-index: 3;}
+    75% {opacity: 1; z-index: 3;}
+    100% {opacity: 0; z-index: 3;}
+  }
+}
+
+@mixin iLoader {
+@keyframes iLoader {
+      0% {opacity: 0; transform: translateY(0);}
+      50% {opacity: 1; transform: translateY(5vh);}
+      100% {opacity: 0; transform: translateY(5vh);}
+    }    
+}
+
+@mixin iLoaderNameResto {
+@keyframes iLoaderNameResto {
+  0% {opacity: 1; transform: rotateY(90deg);}
+  75% {opacity: 1;}
+  100% {opacity: 0;}
+} 
+}

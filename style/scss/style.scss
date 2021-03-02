@@ -2,7 +2,6 @@
 @import "_mixin.scss";
 @import "_keyframes.scss";
 
-
 html {
   scroll-behavior: smooth;
 }
@@ -11,6 +10,63 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  background: white;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation-name: loader;
+  animation-duration: 3s;
+  @include loader;
+  .icoWhile {
+    .fa-pizza-slice, .fa-hamburger, .fa-cheese, .fa-coffee {
+      // position: absolute;
+      opacity: 0;
+      animation-name: iLoader;
+      animation-duration: 500ms;
+      font-size: 5vh;
+    }
+    .fa-pizza-slice {
+      color: $ColorPremier;
+      animation-delay: 500ms;
+    }
+    .fa-hamburger {
+      color: $ColorSecond;
+      animation-delay: 1000ms;
+    }
+    .fa-cheese {
+      color: $ColorTertiaire;
+      animation-delay: 1500ms;
+    }
+    .fa-coffee {
+      color: $ColorPremier;
+      animation-delay: 2000ms;
+    }
+    @include iLoader;  
+  }
+    
+}
+
+.titleShrikhandLoader {
+  opacity: 0;
+  animation-name: iLoaderNameResto;
+  animation-duration: 3000ms;
+  position: relative;
+  top: 5vh;
+  color: black;
+  font-size: 4vh;
+  font-family: "Shrikhand", cursive;
+}
+@include iLoaderNameResto;
+
 
 .iBack {
   font-size: 2vh;
@@ -35,9 +91,8 @@ body {
 .iFx {
   position: absolute;
   left: 6vh;
-  color: #7E7E7E;
+  color: #7e7e7e;
   font-size: 3vh;
-  
 }
 
 #imglogo {
@@ -178,7 +233,7 @@ li {
   display: flex;
   align-items: center;
   margin: 3vh 0;
-  box-shadow: 0 5px 10px 2px #EBEBEB;
+  box-shadow: 0 5px 10px 2px #ebebeb;
   font-size: 2.2vh;
   font-weight: 500;
   height: 10vh;
@@ -187,19 +242,19 @@ li {
   &:before {
     content: counter(compter); /* cout */
     counter-increment: compter; /* incriment */
-    background: $ColorPremier; 
-    color: white; 
+    background: $ColorPremier;
+    color: white;
     padding: 1vh 1.72vh;
     border-radius: 50%;
-    margin-right: 8vh; 
+    margin-right: 8vh;
     position: relative;
     left: -1.72vh;
   }
 }
 
 .buttonFx {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 #menuResto {
@@ -213,14 +268,12 @@ li {
     @include aligncenterblock;
   }
   a {
-    padding: 0 -3vh -3vh -3vh;
     text-decoration: none;
     color: black;
     &:hover + img {
       object-position: 1px 1px;
     }
   }
-  
 }
 
 .titleMenu {
@@ -258,8 +311,8 @@ li {
 
 .labelNew {
   position: absolute;
-  background-color: #99E2D0;
-  color: #068B6B;
+  background-color: #99e2d0;
+  color: #068b6b;
   padding: 1vh 2vh;
   border-radius: 0.5vh;
   font-size: 2vh;
@@ -268,7 +321,7 @@ li {
 }
 
 // .imgCarte {
-  
+
 // }
 
 .discription {
@@ -280,7 +333,8 @@ li {
 
 @include addLike;
 
-.titleCarte, .titleResto {
+.titleCarte,
+.titleResto {
   margin: 0.5vh 0;
   font-size: 2.5vh;
 }
@@ -290,11 +344,11 @@ footer {
   background-color: #353535;
   color: white;
   font-size: 2vh;
-  font-weight: 400px;
+  font-weight: 400;
   img {
     margin: 3vh;
     width: 30%;
-    filter: invert(100%); 
+    filter: invert(100%);
   }
 }
 
@@ -305,19 +359,19 @@ footer {
   flex-direction: column;
   @include aligncenterblock;
   @media screen and (min-width: 600px) {
-    width: 600px;  
+    width: 600px;
   }
 }
 
-.linkFooter, .titleShrikhand  {
+.linkFooter,
+.titleShrikhand, .titleShrikhandLoader {
   margin: 0.5vh 3vh;
-  color: white;
   a {
     text-decoration: none;
     color: white;
     &:hover {
       color: $ColorPremier;
-    } 
+    }
   }
   .withIco {
     position: absolute;
@@ -326,6 +380,8 @@ footer {
 }
 
 .titleShrikhand {
-  font-family: 'Shrikhand', cursive;
+  color: white;
   font-size: 4vh;
+  font-family: "Shrikhand", cursive;
 }
+

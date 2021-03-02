@@ -10,6 +10,173 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  background: white;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  -webkit-animation-name: loader;
+          animation-name: loader;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+@-webkit-keyframes loader {
+  0% {
+    opacity: 1;
+    z-index: 3;
+  }
+  75% {
+    opacity: 1;
+    z-index: 3;
+  }
+  100% {
+    opacity: 0;
+    z-index: 3;
+  }
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+    z-index: 3;
+  }
+  75% {
+    opacity: 1;
+    z-index: 3;
+  }
+  100% {
+    opacity: 0;
+    z-index: 3;
+  }
+}
+
+.loader .icoWhile .fa-pizza-slice, .loader .icoWhile .fa-hamburger, .loader .icoWhile .fa-cheese, .loader .icoWhile .fa-coffee {
+  opacity: 0;
+  -webkit-animation-name: iLoader;
+          animation-name: iLoader;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+  font-size: 5vh;
+}
+
+.loader .icoWhile .fa-pizza-slice {
+  color: #9356dc;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+
+.loader .icoWhile .fa-hamburger {
+  color: #ff79da;
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
+}
+
+.loader .icoWhile .fa-cheese {
+  color: #99e2d0;
+  -webkit-animation-delay: 1500ms;
+          animation-delay: 1500ms;
+}
+
+.loader .icoWhile .fa-coffee {
+  color: #9356dc;
+  -webkit-animation-delay: 2000ms;
+          animation-delay: 2000ms;
+}
+
+@-webkit-keyframes iLoader {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(5vh);
+            transform: translateY(5vh);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(5vh);
+            transform: translateY(5vh);
+  }
+}
+
+@keyframes iLoader {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(5vh);
+            transform: translateY(5vh);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(5vh);
+            transform: translateY(5vh);
+  }
+}
+
+.titleShrikhandLoader {
+  opacity: 0;
+  -webkit-animation-name: iLoaderNameResto;
+          animation-name: iLoaderNameResto;
+  -webkit-animation-duration: 3000ms;
+          animation-duration: 3000ms;
+  position: relative;
+  top: 5vh;
+  color: black;
+  font-size: 4vh;
+  font-family: "Shrikhand", cursive;
+}
+
+@-webkit-keyframes iLoaderNameResto {
+  0% {
+    opacity: 1;
+    -webkit-transform: rotateY(90deg);
+            transform: rotateY(90deg);
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes iLoaderNameResto {
+  0% {
+    opacity: 1;
+    -webkit-transform: rotateY(90deg);
+            transform: rotateY(90deg);
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .iBack {
   font-size: 2vh;
   position: absolute;
@@ -36,7 +203,7 @@ body {
 .iFx {
   position: absolute;
   left: 6vh;
-  color: #7E7E7E;
+  color: #7e7e7e;
   font-size: 3vh;
 }
 
@@ -238,8 +405,8 @@ li {
       -ms-flex-align: center;
           align-items: center;
   margin: 3vh 0;
-  -webkit-box-shadow: 0 5px 10px 2px #EBEBEB;
-          box-shadow: 0 5px 10px 2px #EBEBEB;
+  -webkit-box-shadow: 0 5px 10px 2px #ebebeb;
+          box-shadow: 0 5px 10px 2px #ebebeb;
   font-size: 2.2vh;
   font-weight: 500;
   height: 10vh;
@@ -280,7 +447,6 @@ li:before {
 }
 
 .divMenuResto a {
-  padding: 0 -3vh -3vh -3vh;
   text-decoration: none;
   color: black;
 }
@@ -330,8 +496,8 @@ li:before {
 
 .labelNew {
   position: absolute;
-  background-color: #99E2D0;
-  color: #068B6B;
+  background-color: #99e2d0;
+  color: #068b6b;
   padding: 1vh 2vh;
   border-radius: 0.5vh;
   font-size: 2vh;
@@ -395,7 +561,8 @@ li:before {
   font-size: 4vh;
 }
 
-.titleCarte, .titleResto {
+.titleCarte,
+.titleResto {
   margin: 0.5vh 0;
   font-size: 2.5vh;
 }
@@ -405,7 +572,7 @@ footer {
   background-color: #353535;
   color: white;
   font-size: 2vh;
-  font-weight: 400px;
+  font-weight: 400;
 }
 
 footer img {
@@ -435,27 +602,31 @@ footer img {
   }
 }
 
-.linkFooter, .titleShrikhand {
+.linkFooter,
+.titleShrikhand, .titleShrikhandLoader {
   margin: 0.5vh 3vh;
-  color: white;
 }
 
-.linkFooter a, .titleShrikhand a {
+.linkFooter a,
+.titleShrikhand a, .titleShrikhandLoader a {
   text-decoration: none;
   color: white;
 }
 
-.linkFooter a:hover, .titleShrikhand a:hover {
+.linkFooter a:hover,
+.titleShrikhand a:hover, .titleShrikhandLoader a:hover {
   color: #9356dc;
 }
 
-.linkFooter .withIco, .titleShrikhand .withIco {
+.linkFooter .withIco,
+.titleShrikhand .withIco, .titleShrikhandLoader .withIco {
   position: absolute;
   left: 7vh;
 }
 
 .titleShrikhand {
-  font-family: 'Shrikhand', cursive;
+  color: white;
   font-size: 4vh;
+  font-family: "Shrikhand", cursive;
 }
 /*# sourceMappingURL=style.css.map */
