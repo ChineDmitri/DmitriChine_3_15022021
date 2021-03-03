@@ -525,7 +525,6 @@ li:before {
   background: linear-gradient(180deg, #9356dc, #ff79da);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: #9356dc;
 }
 
 .iLike {
@@ -546,7 +545,6 @@ li:before {
   background: linear-gradient(180deg, #9356dc, #ff79da);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: #9356dc;
 }
 
 .main {

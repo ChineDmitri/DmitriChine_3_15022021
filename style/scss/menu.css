@@ -157,7 +157,6 @@ header .logo {
   background: linear-gradient(180deg, #9356dc, #ff79da);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: #9356dc;
 }
 
 .iLike {
@@ -178,7 +177,6 @@ header .logo {
   background: linear-gradient(180deg, #9356dc, #ff79da);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: #9356dc;
 }
 
 .main {
