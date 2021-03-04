@@ -1,8 +1,14 @@
 
 @mixin SliderTop {
-    @keyframes SlideTop {
-        from {margin: 3vh 0;}
-        to {margin: 2vh 0;}
+    @keyframes SliderTop {
+        from {
+          margin: 3vh 0;
+          opacity: 0;
+        }
+        to {
+          margin: 2vh 0;
+          opacity: 1;
+        }
       }
 }
 

@@ -108,8 +108,8 @@ body {
 
 $Tdecouvrire: 3s;
 #entrees, #plat, #desserts {
-  animation: decouvrire $Tdecouvrire;
-  @include decouvrire;
+  // animation: decouvrire $Tdecouvrire;
+  // @include decouvrire;
   margin-bottom: 5vh;
   h2 {
     text-transform: uppercase;
@@ -128,10 +128,32 @@ $Tdecouvrire: 3s;
   width: 8vh;
   height: 0.5vh;
 }
+
+.p1, .p2, .p3, .p4 {
+  animation: SliderTop;
+  animation-duration: $TflashBoxLeft;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  @include SliderTop; /* KEYFRAME POUR SliderTop */
+}
+
+.p1 {
+  animation-delay: calc((#{$TflashBoxLeft} / 4));
+}
+
+.p2 {
+  animation-delay: calc((#{$TflashBoxLeft} / 4) * 2);
+}
+
+.p3 {
+  animation-delay: calc((#{$TflashBoxLeft} / 4) * 3);
+}
+
+.p4 {
+  animation-delay: calc((#{$TflashBoxLeft} / 4) * 4);
+}
  
 .epd {
-  animation: SlideTop 1.5s;
-  @include SliderTop; /* KEYFRAME POUR SliderTop */
   overflow: hidden; /* pour voir functionnement fait commentaire */
   position: relative;
   display: flex;
@@ -141,7 +163,6 @@ $Tdecouvrire: 3s;
   background-color: white;
   border-radius: 3vh;
   box-shadow: 0 0 6px 3px #E6E6E6;
-  transition-duration: $TflashBoxLeft;
   .titre1 {
     white-space: nowrap; 
     overflow: hidden;
@@ -214,7 +235,7 @@ $Tdecouvrire: 3s;
     animation-name: validateur;
     animation-duration: $TflashBoxLeft ;
   }
-  @include validateur;
+  @include validateur; /* KEYFRAME pour validation */
 }
 
 footer {

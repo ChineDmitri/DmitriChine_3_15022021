@@ -192,27 +192,7 @@ header .logo {
 }
 
 #entrees, #plat, #desserts {
-  -webkit-animation: decouvrire 3s;
-          animation: decouvrire 3s;
   margin-bottom: 5vh;
-}
-
-@-webkit-keyframes decouvrire {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes decouvrire {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 #entrees h2, #plat h2, #desserts h2 {
@@ -233,10 +213,61 @@ header .logo {
   height: 0.5vh;
 }
 
-.epd {
-  -webkit-animation: SlideTop 1.5s;
-          animation: SlideTop 1.5s;
+.p1, .p2, .p3, .p4 {
+  -webkit-animation: SliderTop;
+          animation: SliderTop;
+  -webkit-animation-duration: 800ms;
+          animation-duration: 800ms;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
   /* KEYFRAME POUR SliderTop */
+}
+
+@-webkit-keyframes SliderTop {
+  from {
+    margin: 3vh 0;
+    opacity: 0;
+  }
+  to {
+    margin: 2vh 0;
+    opacity: 1;
+  }
+}
+
+@keyframes SliderTop {
+  from {
+    margin: 3vh 0;
+    opacity: 0;
+  }
+  to {
+    margin: 2vh 0;
+    opacity: 1;
+  }
+}
+
+.p1 {
+  -webkit-animation-delay: calc((800ms / 4));
+          animation-delay: calc((800ms / 4));
+}
+
+.p2 {
+  -webkit-animation-delay: calc((800ms / 4) * 2);
+          animation-delay: calc((800ms / 4) * 2);
+}
+
+.p3 {
+  -webkit-animation-delay: calc((800ms / 4) * 3);
+          animation-delay: calc((800ms / 4) * 3);
+}
+
+.p4 {
+  -webkit-animation-delay: calc((800ms / 4) * 4);
+          animation-delay: calc((800ms / 4) * 4);
+}
+
+.epd {
   overflow: hidden;
   /* pour voir functionnement fait commentaire */
   position: relative;
@@ -253,26 +284,7 @@ header .logo {
   border-radius: 3vh;
   -webkit-box-shadow: 0 0 6px 3px #E6E6E6;
           box-shadow: 0 0 6px 3px #E6E6E6;
-  -webkit-transition-duration: 800ms;
-          transition-duration: 800ms;
-}
-
-@-webkit-keyframes SlideTop {
-  from {
-    margin: 3vh 0;
-  }
-  to {
-    margin: 2vh 0;
-  }
-}
-
-@keyframes SlideTop {
-  from {
-    margin: 3vh 0;
-  }
-  to {
-    margin: 2vh 0;
-  }
+  /* KEYFRAME pour validation */
 }
 
 .epd .titre1 {
