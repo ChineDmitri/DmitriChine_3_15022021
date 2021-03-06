@@ -257,7 +257,7 @@ $Tdecouvrire: 3s;
     display: none;
   }
   @include validateur; /* KEYFRAME pour validation */
-  input:checked ~ div > i { 
+  input:checked ~ .flashBoxLeft > i { 
     animation-name: validateur;
     animation-duration: $TflashBoxLeft ;
   }

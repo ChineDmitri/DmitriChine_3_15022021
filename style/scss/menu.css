@@ -400,7 +400,7 @@ header .logo {
   }
 }
 
-.epd input:checked ~ div > i {
+.epd input:checked ~ .flashBoxLeft > i {
   -webkit-animation-name: validateur;
           animation-name: validateur;
   -webkit-animation-duration: 800ms;
