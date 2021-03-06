@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,10 +20,10 @@
         </div>
     </header>
     <div class="photoMenu">
-        <img src="../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
+        <img src="../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
     </div>   
     <section class="carte">
-        <div class="carteBox">
+        <form class="carteBox" method="GET" action="validation_commande.php">
         
             <h1>Le délice des sens</h1>
 
@@ -38,91 +38,100 @@
             <article id="entrees">
                 <h2>ENTRÉES</h2>
                 <div class="sousligne"> </div>
-                <a href="#">
-                    <div class="epd p1">
+                
+                    <label class="epd p1">
+                        <input type="checkbox" name="entrees" value="Tartare de thon">
                         <span class="titre1">Tartare de thon</span>
                         <span class="titre2">Assaisonné au yuzu</span>
                         <span class="prix">25€</span>
-                        <div class="flashBoxLeft"><i class="fas fa-check-circle"></i></div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="epd p2">
+                        <span class="flashBoxLeft"><i class="fas fa-check-circle"></i></span>
+                    </label>
+                
+                
+                    <label class="epd p2">
+                        <input type="checkbox" name="entrees" value="Bouchée de homard croustillant">
                         <span class="titre1">Bouchée de homard croustillant</span>
                         <span class="titre2">Et sa farandole de petits légumes</span>
                         <span class="prix">35€</span>
-                        <div class="flashBoxLeft"><i class="fas fa-check-circle"></i></div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="epd p3">
+                        <span class="flashBoxLeft"><i class="fas fa-check-circle"></i></span>
+                    </label>
+                
+                
+                    <label class="epd p3">
+                        <input type="checkbox" name="entrees" value="Velouté de cèpes">
                         <span class="titre1">Velouté de cèpes</span>
                         <span class="titre2">Aux truffes</span>
                         <span class="prix">20€</span>
-                        <div class="flashBoxLeft"><i class="fas fa-check-circle"></i></div>
-                    </div>
-                </a>
+                        <span class="flashBoxLeft"><i class="fas fa-check-circle"></i></span>
+                    </label>
+                
                 </article>
 
             <article id="plat">
                 <h2>Plats</h2>
                 <div class="sousligne"> </div>
-                <a href="#">
-                    <div class="epd p1">
+                
+                    <label class="epd p1">
+                        <input type="checkbox" name="plat" value=">Poulet rôti aux herbes de Provence">
                         <span class="titre1">Poulet rôti aux herbes de Provence</span>
                         <span class="titre2">Et sa crème de truffe</span>
                         <span class="prix">40€</span>
-                        <div class="flashBoxLeft"><i class="fas fa-check-circle"></i></div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="epd p2">
+                        <span class="flashBoxLeft"><i class="fas fa-check-circle"></i></span>
+                    </label>
+                
+                
+                    <label class="epd p2">
+                        <input type="checkbox" name="plat" value="Langouste rôtie">
                         <span class="titre1">Langouste rôtie</span>
                         <span class="titre2">Et ses légumes de saison</span>
                         <span class="prix">35€</span>
-                        <div class="flashBoxLeft"><i class="fas fa-check-circle"></i></div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="epd p3">
+                        <span class="flashBoxLeft"><i class="fas fa-check-circle"></i></span>
+                    </label>
+                
+                
+                    <label class="epd p3">
+                        <input type="checkbox" name="plat" value="Côte de boeuf Angus">
                         <span class="titre1">Côte de boeuf Angus</span>
                         <span class="titre2">Et sa purée de panais</span>
                         <span class="prix">44€</span>
-                        <div class="flashBoxLeft"><i class="fas fa-check-circle"></i></div>
-                    </div>
-                </a>
+                        <span class="flashBoxLeft"><i class="fas fa-check-circle"></i></span>
+                    </label>
+                
             </article>
 
             <article id="desserts">
                 <h2>Desserts</h2>
                 <div class="sousligne"> </div>
-                <a href="#">
-                    <div class="epd p1">
+                
+                    <label class="epd p1">
+                        <input type="checkbox" name="dessert" value="Farandole de desserts">
                         <span class="titre1">Farandole de desserts</span>
                         <span class="titre2">Du chef</span>
                         <span class="prix">18€</span>
-                        <div class="flashBoxLeft"><i class="fas fa-check-circle"></i></div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="epd p2">
+                        <span class="flashBoxLeft"><i class="fas fa-check-circle"></i></span>
+                    </label>
+                
+                
+                    <label class="epd p2">
+                        <input type="checkbox" name="dessert" value="Crème brulée">
                         <span class="titre1">Crème brulée</span>
                         <span class="titre2">Revisitée</span>
                         <span class="prix">22€</span>
-                        <div class="flashBoxLeft"><i class="fas fa-check-circle"></i></div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="epd p3">
+                        <span class="flashBoxLeft"><i class="fas fa-check-circle"></i></span>
+                    </label>
+                
+                
+                    <label class="epd p3">
+                        <input type="checkbox" name="dessert" value="Tiramisu">
                         <span class="titre1">Tiramisu</span>
                         <span class="titre2">À la noisette</span>
                         <span class="prix">23€</span>
-                        <div class="flashBoxLeft"><i class="fas fa-check-circle"></i></div>
-                    </div>
-                </a>
+                        <span class="flashBoxLeft"><i class="fas fa-check-circle"></i></span>
+                    </label>
+                
             </article>
             <button>Commander</button>
-        </div>
+        </form>
         
     </section>
 
