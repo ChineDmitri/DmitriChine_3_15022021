@@ -250,6 +250,13 @@ li {
     position: relative;
     left: -1.72vh;
   }
+  &:hover {
+    font-size: 2.2vh;
+    font-weight: 700;
+  }
+  &:hover .iFx {
+    color: $ColorPremier;
+  }
 }
 
 .linkFx {

@@ -429,6 +429,15 @@ li:before {
   left: -1.72vh;
 }
 
+li:hover {
+  font-size: 2.2vh;
+  font-weight: 700;
+}
+
+li:hover .iFx {
+  color: #9356dc;
+}
+
 .linkFx {
   display: -webkit-box;
   display: -ms-flexbox;
