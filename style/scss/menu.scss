@@ -211,31 +211,58 @@ $Tdecouvrire: 3s;
       font-size: 4vh; 
     }     
   } 
-
-  &:hover .flashBoxLeft {
+  input:checked ~ .flashBoxLeft {
     transform: translateX(-1vh);
     margin-right: -1vh;
   }
-  &:hover .prix {
-      right: calc(#{$SflashBoxLeft} + 2vh);
-    }
-  &:hover .titre2 {
+  // &:hover .flashBoxLeft {
+  //   transform: translateX(-1vh);
+  //   margin-right: -1vh;
+  // }
+
+  input:checked ~ .prix {
+    right: calc(#{$SflashBoxLeft} + 2vh);
+  }
+  // &:hover .prix {
+  //   right: calc(#{$SflashBoxLeft} + 2vh);
+  // }
+
+  input:checked ~ .titre2 {
     width: 65%;
     text-overflow: ellipsis;
     white-space: nowrap; 
     overflow: hidden;
   }
-  &:hover .titre1 {
+  // &:hover .titre2 {
+  //   width: 65%;
+  //   text-overflow: ellipsis;
+  //   white-space: nowrap; 
+  //   overflow: hidden;
+  // }
+
+  input:checked ~ .titre1 {
     width: 80%;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
   }  
-  &:hover i { 
+  // &:hover .titre1 {
+  //   width: 80%;
+  //   text-overflow: ellipsis;
+  //   white-space: nowrap;
+  //   overflow: hidden;
+  // }  
+
+  @include validateur; /* KEYFRAME pour validation */
+  input:checked ~ div > i { 
     animation-name: validateur;
     animation-duration: $TflashBoxLeft ;
   }
-  @include validateur; /* KEYFRAME pour validation */
+  // &:hover i { 
+  //   animation-name: validateur;
+  //   animation-duration: $TflashBoxLeft ;
+  // }
+  
 }
 
 footer {

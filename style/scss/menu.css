@@ -349,35 +349,28 @@ header .logo {
   font-size: 4vh;
 }
 
-.epd:hover .flashBoxLeft {
+.epd input:checked ~ .flashBoxLeft {
   -webkit-transform: translateX(-1vh);
           transform: translateX(-1vh);
   margin-right: -1vh;
 }
 
-.epd:hover .prix {
+.epd input:checked ~ .prix {
   right: calc(12vh + 2vh);
 }
 
-.epd:hover .titre2 {
+.epd input:checked ~ .titre2 {
   width: 65%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
-.epd:hover .titre1 {
+.epd input:checked ~ .titre1 {
   width: 80%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-}
-
-.epd:hover i {
-  -webkit-animation-name: validateur;
-          animation-name: validateur;
-  -webkit-animation-duration: 800ms;
-          animation-duration: 800ms;
 }
 
 @-webkit-keyframes validateur {
@@ -400,6 +393,13 @@ header .logo {
     -webkit-transform: rotate(1turn);
             transform: rotate(1turn);
   }
+}
+
+.epd input:checked ~ div > i {
+  -webkit-animation-name: validateur;
+          animation-name: validateur;
+  -webkit-animation-duration: 800ms;
+          animation-duration: 800ms;
 }
 
 footer {
