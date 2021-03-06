@@ -1,6 +1,8 @@
 @charset "UTF-8";
 /* width dans le FlashBoxLeft */
 /* duration du block validation avec l'icône check-circle sortant de gauche */
+/* Espace entre chaque élément dans les sous-blocks du fonctionnement */
+/* Coefficient si vous voulez réduit ou agrandit espaces entre les sous-blocks du fonctionnement*/
 html {
   scroll-behavior: smooth;
 }
