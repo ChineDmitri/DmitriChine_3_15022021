@@ -15,49 +15,46 @@
 </head>
 
 <body>
-    <!-- <div class="loader">
+    <div class="loader">
         <div class="icoWhile">
             <i class="fas fa-pizza-slice"></i>
             <i class="fas fa-hamburger"></i>
             <i class="fas fa-cheese"></i>
-            <i class="fas fa-coffee"></i> 
+            <!-- <i class="fas fa-coffee"></i>  -->
         </div>
         <span class="titleShrikhandLoader">ohmyfood</span>
-    </div> -->
+    </div>
     <header>
         <!-- <span class="iBack"><a href="#"><i class="fas fa-arrow-left"></i></a></span>         -->
         <div class="logo">
             <img src="images/logo/ohmyfood@2x.svg" alt="OhMyFood" id="imglogo">
         </div>
     </header>
-    <div class="sousheader geoloc">
-        <form class="blocksousheader" method="get" action="explorer.php">
-            <span class="iGeo"><i class="fas fa-map-marker-alt"></i></span>
-            <input 
-                type="text" 
-                name="city" 
-                id="geo_position" 
-                Value="Paris, Belleville" 
-                list="possibleville" 
-                required pattern="Paris, Belleville|Paris, Villette|Paris, Grandes-Carrières"
-            >
-            <datalist id="possibleville">
-                <option id="BV" value="Paris, Belleville"> 
-                <option id="V" value="Paris, Villette">
-                <option id="GC" value="Paris, Grandes-Carrières">   
-            </datalist>
-            <!-- </input> -->
-            
-        
-    </div>
-    <div class="sousheader presentation">
-        <div class="blocksousheader">
-            <span class="l1">Réservez le menu qui vous convient</span>
-            <span class="l2">Découvrez des restorants d'exeption, sélectionnés par nos soins.</span>
-                <button>Explorer nos restaurants</button>
+    <form method="get" action="explorer.php">
+        <div class="sousheader geoloc">
+            <div class="blocksousheader">
+                <span class="iGeo"><i class="fas fa-map-marker-alt"></i></span>
+                <input type="text" name="city" id="geo_position" Value="Paris, Belleville" list="possibleville" required
+                    pattern="Paris, Belleville|Paris, Villette|Paris, Grandes-Carrières">
+                <datalist id="possibleville">
+                    <option id="BV" value="Paris, Belleville">
+                    <option id="V" value="Paris, Villette">
+                    <option id="GC" value="Paris, Grandes-Carrières">
+                </datalist>
+                <!-- </input> -->
+    
+            </div>
+    
         </div>
-    </div>
-</form>
+        <div class="sousheader presentation">
+            <div class="blocksousheader">
+                <span class="l1">Réservez le menu qui vous convient</span>
+                <span class="l2">Découvrez des restorants d'exeption, sélectionnés par nos soins.</span>
+                <button>Explorer nos restaurants</button>
+            </div>
+        </div>
+    </form>
+
     <!-- FONCTIONEMMENT -->
     <section class="fonctionemment">
         <h2 class="titleFx">Fonctionemment</h2>
