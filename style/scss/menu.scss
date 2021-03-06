@@ -163,6 +163,7 @@ $Tdecouvrire: 3s;
   background-color: white;
   border-radius: 3vh;
   box-shadow: 0 0 6px 3px #E6E6E6;
+  cursor: pointer;
   .titre1 {
     white-space: nowrap; 
     overflow: hidden;
@@ -252,7 +253,9 @@ $Tdecouvrire: 3s;
   //   white-space: nowrap;
   //   overflow: hidden;
   // }  
-
+  input {
+    display: none;
+  }
   @include validateur; /* KEYFRAME pour validation */
   input:checked ~ div > i { 
     animation-name: validateur;
