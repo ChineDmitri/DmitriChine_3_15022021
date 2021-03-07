@@ -166,9 +166,12 @@ header {
     border-radius: 3vh;
   }
   button {
+    position: relative;
+    z-index: 2;
     background: linear-gradient(360deg, $ColorPremier, $ColorSecond);
     padding: 2vh 5vw 1.8vh 5vw;
     border-radius: 3vh;
+    box-shadow: 0 5px 10px 2px #B6B6B6;
     font-size: 2.2vh;
     font-weight: 600;
     color: white;
@@ -176,7 +179,11 @@ header {
     outline: none;
     cursor: pointer;
     margin: $marginItemSousheader;
+    &:hover {
+      box-shadow: 0 2px 10px 2px $ColorPremier;
+    }
   }
+  
   a {
     @include aligncenterblock;
     text-decoration: none;
@@ -250,6 +257,7 @@ li {
   &:hover {
     font-size: 2.2vh;
     font-weight: 700;
+    box-shadow: 0 5px 10px 2px $ColorPremier;
   }
   &:hover .iFx {
     color: $ColorPremier;
@@ -310,7 +318,7 @@ li {
   background-color: white;
   margin: 0 3vh 3vh 3vh;
   border-radius: 2.5vh;
-  box-shadow: 0 0 5px 2px #ebebeb;
+  box-shadow: 0 0 10px 2px #B6B6B6;
   img {
     object-fit: cover;
     width: 100%;
@@ -319,8 +327,11 @@ li {
     border-top-right-radius: 2.5vh;
     transition-duration: 2s;
   }
+  &:hover {
+    box-shadow: 0 2px 10px 2px $ColorPremier;
+  }
   &:hover img {
-    object-position: 1px 1px;
+    object-position: 0px 0px;
   }
 }
 

@@ -42,30 +42,30 @@ body {
 @-webkit-keyframes loader {
   0% {
     opacity: 1;
-    z-index: 3;
+    z-index: 99;
   }
   75% {
     opacity: 1;
-    z-index: 3;
+    z-index: 99;
   }
   100% {
     opacity: 0;
-    z-index: 3;
+    z-index: 99;
   }
 }
 
 @keyframes loader {
   0% {
     opacity: 1;
-    z-index: 3;
+    z-index: 99;
   }
   75% {
     opacity: 1;
-    z-index: 3;
+    z-index: 99;
   }
   100% {
     opacity: 0;
-    z-index: 3;
+    z-index: 99;
   }
 }
 
@@ -325,10 +325,14 @@ header .logo {
 }
 
 .blocksousheader button {
+  position: relative;
+  z-index: 2;
   background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
   background: linear-gradient(360deg, #9356dc, #ff79da);
   padding: 2vh 5vw 1.8vh 5vw;
   border-radius: 3vh;
+  -webkit-box-shadow: 0 5px 10px 2px #B6B6B6;
+          box-shadow: 0 5px 10px 2px #B6B6B6;
   font-size: 2.2vh;
   font-weight: 600;
   color: white;
@@ -336,6 +340,11 @@ header .logo {
   outline: none;
   cursor: pointer;
   margin: 2vh 0;
+}
+
+.blocksousheader button:hover {
+  -webkit-box-shadow: 0 2px 10px 2px #9356dc;
+          box-shadow: 0 2px 10px 2px #9356dc;
 }
 
 .blocksousheader a {
@@ -433,6 +442,8 @@ li:before {
 li:hover {
   font-size: 2.2vh;
   font-weight: 700;
+  -webkit-box-shadow: 0 5px 10px 2px #9356dc;
+          box-shadow: 0 5px 10px 2px #9356dc;
 }
 
 li:hover .iFx {
@@ -510,8 +521,8 @@ li:hover .iFx {
   background-color: white;
   margin: 0 3vh 3vh 3vh;
   border-radius: 2.5vh;
-  -webkit-box-shadow: 0 0 5px 2px #ebebeb;
-          box-shadow: 0 0 5px 2px #ebebeb;
+  -webkit-box-shadow: 0 0 10px 2px #B6B6B6;
+          box-shadow: 0 0 10px 2px #B6B6B6;
 }
 
 .carteResto img {
@@ -525,9 +536,14 @@ li:hover .iFx {
           transition-duration: 2s;
 }
 
+.carteResto:hover {
+  -webkit-box-shadow: 0 2px 10px 2px #9356dc;
+          box-shadow: 0 2px 10px 2px #9356dc;
+}
+
 .carteResto:hover img {
-  -o-object-position: 1px 1px;
-     object-position: 1px 1px;
+  -o-object-position: 0px 0px;
+     object-position: 0px 0px;
 }
 
 .labelNew {
@@ -554,9 +570,9 @@ li:hover .iFx {
 }
 
 .addCarte:focus .iLike {
-  -webkit-text-stroke: 0vh white;
-  -webkit-transform: scale(1.01);
-          transform: scale(1.01);
+  -webkit-text-stroke: 0.1vh white;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
   background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
   background: linear-gradient(180deg, #9356dc, #ff79da);
   -webkit-background-clip: text;
@@ -567,20 +583,35 @@ li:hover .iFx {
   position: absolute;
   color: white;
   -webkit-text-stroke: 0.1vh black;
-  -webkit-transition: 600ms;
-  transition: 600ms;
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
-.iLike:hover {
-  -webkit-text-stroke: 0vh white;
-  -webkit-transform: scale(1.01);
-          transform: scale(1.01);
+.oui {
+  -webkit-text-stroke: 0.1vh white;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
   background: linear-gradient(180deg, #9356dc, #ff79da);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+
+.oui:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  opacity: 1;
+}
+
+.oui:hover .non {
+  opacity: 0;
+}
+
+.non {
+  color: white;
+  -webkit-text-stroke: 0.1vh black;
+  opacity: 1;
 }
 
 .main {

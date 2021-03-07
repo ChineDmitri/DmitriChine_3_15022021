@@ -6,8 +6,8 @@
 
 @mixin addLike {
     .addCarte:focus .iLike {
-        -webkit-text-stroke: 0vh white;
-        transform: scale(1.01);
+        -webkit-text-stroke: 0.1vh white;
+        transform: scale(1.15);
         background: linear-gradient(180deg, $ColorPremier, $ColorSecond);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -18,18 +18,31 @@
         position: absolute;
         color: white;
         -webkit-text-stroke: 0.1vh black;
-        transition: 600ms;
         transform-origin: 50% 50%;
-        &:hover {
-          -webkit-text-stroke: 0vh white;
-          transform: scale(1.01);
-          background: linear-gradient(180deg, $ColorPremier, $ColorSecond);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          // color: $ColorPremier;
-        }
+        transition-duration: 1s;
       }
       
+      .oui {
+        -webkit-text-stroke: 0.1vh white;
+        background: linear-gradient(180deg, $ColorPremier, $ColorSecond);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0;
+        &:hover {
+          transform: scale(1.15);
+          opacity: 1;
+        }
+        &:hover .non {
+          opacity: 0;
+        }
+      }
+
+      .non {
+        color: white;
+        -webkit-text-stroke: 0.1vh black;
+        opacity: 1;
+      }
+
       .main {
         bottom: 2vh;
         right: 4vh;
@@ -41,4 +54,7 @@
         right: 3vh;
         font-size: 4vh;
       }
+
+      
+
 }

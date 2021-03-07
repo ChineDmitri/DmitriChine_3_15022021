@@ -142,6 +142,8 @@ header .logo {
   background: linear-gradient(360deg, #9356dc, #ff79da);
   padding: 2vh 8vw 1.8vh 8vw;
   border-radius: 3vh;
+  -webkit-box-shadow: 0 5px 10px 2px #B6B6B6;
+          box-shadow: 0 5px 10px 2px #B6B6B6;
   font-size: 2.2vh;
   font-weight: 600;
   margin: 5vh auto 10vh auto;
@@ -151,10 +153,15 @@ header .logo {
   cursor: pointer;
 }
 
+.carte button:hover {
+  -webkit-box-shadow: 0 2px 10px 2px #9356dc;
+          box-shadow: 0 2px 10px 2px #9356dc;
+}
+
 .addCarte:focus .iLike {
-  -webkit-text-stroke: 0vh white;
-  -webkit-transform: scale(1.01);
-          transform: scale(1.01);
+  -webkit-text-stroke: 0.1vh white;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
   background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
   background: linear-gradient(180deg, #9356dc, #ff79da);
   -webkit-background-clip: text;
@@ -165,20 +172,35 @@ header .logo {
   position: absolute;
   color: white;
   -webkit-text-stroke: 0.1vh black;
-  -webkit-transition: 600ms;
-  transition: 600ms;
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
-.iLike:hover {
-  -webkit-text-stroke: 0vh white;
-  -webkit-transform: scale(1.01);
-          transform: scale(1.01);
+.oui {
+  -webkit-text-stroke: 0.1vh white;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
   background: linear-gradient(180deg, #9356dc, #ff79da);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+
+.oui:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  opacity: 1;
+}
+
+.oui:hover .non {
+  opacity: 0;
+}
+
+.non {
+  color: white;
+  -webkit-text-stroke: 0.1vh black;
+  opacity: 1;
 }
 
 .main {
@@ -271,6 +293,11 @@ header .logo {
 .p4 {
   -webkit-animation-delay: calc((800ms / 4) * 4);
           animation-delay: calc((800ms / 4) * 4);
+}
+
+input:checked ~ .epd {
+  -webkit-box-shadow: 0 2px 10px 2px #9356dc;
+          box-shadow: 0 2px 10px 2px #9356dc;
 }
 
 .epd {
