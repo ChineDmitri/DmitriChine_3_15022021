@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* width dans le FlashBoxLeft */
-/* duration du block validation avec l'icône check-circle sortant de gauche */
+/* duration du block validation avec l'icône check-circle sortant de gauche  */
 /* Espace entre chaque élément dans les sous-blocks du fonctionnement */
 /* Coefficient si vous voulez réduit ou agrandit espaces entre les sous-blocks du fonctionnement*/
 html {
@@ -18,7 +18,7 @@ body {
   left: 2vh;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 769px) {
   .iBack {
     left: 1vw;
   }
@@ -60,9 +60,9 @@ header .logo {
   margin-right: auto;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 769px) {
   header {
-    width: 600px;
+    width: calc(769px - 100px);
   }
 }
 
@@ -99,9 +99,9 @@ header .logo {
   width: 100%;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 769px) {
   .carte {
-    width: 600px;
+    width: calc(769px - 100px);
     margin-left: auto;
     margin-right: auto;
   }
@@ -249,9 +249,13 @@ header .logo {
   }
 }
 
+.p {
+  /* utilisation cycle FOR */
+}
+
 .p1 {
-  -webkit-animation-delay: calc((800ms / 4));
-          animation-delay: calc((800ms / 4));
+  -webkit-animation-delay: calc((800ms / 4) * 1);
+          animation-delay: calc((800ms / 4) * 1);
 }
 
 .p2 {
@@ -270,6 +274,7 @@ header .logo {
 }
 
 .epd {
+  /* Classe pour ENTRÉES, PLATS et DESSERTS  */
   overflow: hidden;
   /* pour voir functionnement fait commentaire */
   position: relative;
@@ -415,13 +420,6 @@ footer {
   font-weight: 400px;
 }
 
-footer img {
-  margin: 3vh;
-  width: 30%;
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
-}
-
 .divBlock {
   padding: 1vh 0 4vh 0;
   position: relative;
@@ -436,9 +434,9 @@ footer img {
   margin-right: auto;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 769px) {
   .divBlock {
-    width: 600px;
+    width: calc(769px - 100px);
   }
 }
 

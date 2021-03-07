@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* width dans le FlashBoxLeft */
-/* duration du block validation avec l'icône check-circle sortant de gauche */
+/* duration du block validation avec l'icône check-circle sortant de gauche  */
 /* Espace entre chaque élément dans les sous-blocks du fonctionnement */
 /* Coefficient si vous voulez réduit ou agrandit espaces entre les sous-blocks du fonctionnement*/
 html {
@@ -185,7 +185,7 @@ body {
   left: 2vh;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 769px) {
   .iBack {
     left: 1vw;
   }
@@ -203,6 +203,7 @@ body {
 }
 
 .iFx {
+  /* positionement ICONE dans Fonctionnement. */
   position: absolute;
   left: calc(4.5vh * 1.3 * 1);
   color: #7e7e7e;
@@ -241,9 +242,9 @@ header .logo {
   margin-right: auto;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 769px) {
   header {
-    width: 600px;
+    width: calc(769px - 100px);
   }
 }
 
@@ -293,9 +294,9 @@ header .logo {
           justify-content: center;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 769px) {
   .blocksousheader {
-    width: 600px;
+    width: calc(769px - 100px);
   }
 }
 
@@ -361,7 +362,7 @@ header .logo {
           transition-duration: 300ms;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 769px) {
   .blocksousheader input {
     width: 50%;
   }
@@ -380,9 +381,9 @@ header .logo {
   margin-right: auto;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 769px) {
   .fonctionemment {
-    width: 600px;
+    width: calc(769px - 100px);
   }
 }
 
@@ -473,9 +474,9 @@ li:hover .iFx {
   padding: 5vh 0;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 769px) {
   .divMenuResto {
-    width: 600px;
+    width: calc(769px - 100px);
     margin-left: auto;
     margin-right: auto;
   }
@@ -608,13 +609,6 @@ footer {
   font-weight: 400;
 }
 
-footer img {
-  margin: 3vh;
-  width: 30%;
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
-}
-
 .divBlock {
   padding: 1vh 0 4vh 0;
   position: relative;
@@ -629,9 +623,9 @@ footer img {
   margin-right: auto;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 769px) {
   .divBlock {
-    width: 600px;
+    width: calc(769px - 100px);
   }
 }
 

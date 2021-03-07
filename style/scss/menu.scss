@@ -14,7 +14,7 @@ body {
 .iBack {
   font-size: 2vh;
   position: absolute;
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: $GrandEcrans) {
     left: 1vw;
   }
   left: 2vh;
@@ -42,7 +42,7 @@ body {
       @include aligncenterblock;
     }
     @media screen and (min-width: $GrandEcrans) {
-      width: $GrandEcrans;
+      width: calc(#{$GrandEcrans} - 100px);
     }
   }
 
@@ -59,7 +59,7 @@ body {
 
 .carte {
   @media screen and (min-width: $GrandEcrans) {
-    width: $GrandEcrans;
+    width: calc(#{$GrandEcrans} - 100px);
     @include aligncenterblock;
   }
   display: flex;
@@ -108,8 +108,6 @@ body {
 
 $Tdecouvrire: 3s;
 #entrees, #plat, #desserts {
-  // animation: decouvrire $Tdecouvrire;
-  // @include decouvrire;
   margin-bottom: 5vh;
   h2 {
     text-transform: uppercase;
@@ -137,23 +135,15 @@ $Tdecouvrire: 3s;
   @include SliderTop; /* KEYFRAME POUR SliderTop */
 }
 
-.p1 {
-  animation-delay: calc((#{$TflashBoxLeft} / 4));
-}
-
-.p2 {
-  animation-delay: calc((#{$TflashBoxLeft} / 4) * 2);
-}
-
-.p3 {
-  animation-delay: calc((#{$TflashBoxLeft} / 4) * 3);
-}
-
-.p4 {
-  animation-delay: calc((#{$TflashBoxLeft} / 4) * 4);
+.p { /* utilisation cycle FOR */
+  @for $i from 1 through 4 {
+    &#{$i} {
+      animation-delay: calc((#{$TflashBoxLeft} / 4) * #{$i});
+    }
+  }
 }
  
-.epd {
+.epd { /* Classe pour ENTRÉES, PLATS et DESSERTS  */
   overflow: hidden; /* pour voir functionnement fait commentaire */
   position: relative;
   display: flex;
@@ -193,7 +183,6 @@ $Tdecouvrire: 3s;
   }
   
   .flashBoxLeft {
-    // object-position: right center;
     position: absolute;
     visibility: visible;
     display: flex;
@@ -220,14 +209,12 @@ $Tdecouvrire: 3s;
   //   transform: translateX(-1vh);
   //   margin-right: -1vh;
   // }
-
   input:checked ~ .prix {
     right: calc(#{$SflashBoxLeft} + 2vh);
   }
   // &:hover .prix {
   //   right: calc(#{$SflashBoxLeft} + 2vh);
   // }
-
   input:checked ~ .titre2 {
     width: 65%;
     text-overflow: ellipsis;
@@ -240,7 +227,6 @@ $Tdecouvrire: 3s;
   //   white-space: nowrap; 
   //   overflow: hidden;
   // }
-
   input:checked ~ .titre1 {
     width: 80%;
     text-overflow: ellipsis;
@@ -265,7 +251,6 @@ $Tdecouvrire: 3s;
   //   animation-name: validateur;
   //   animation-duration: $TflashBoxLeft ;
   // }
-  
 }
 
 footer {
@@ -274,11 +259,6 @@ footer {
   color: white;
   font-size: 2vh;
   font-weight: 400px;
-  img {
-    margin: 3vh;
-    width: 30%;
-    filter: invert(100%); 
-  }
 }
 
 .divBlock {
@@ -287,8 +267,8 @@ footer {
   display: flex;
   flex-direction: column;
   @include aligncenterblock;
-  @media screen and (min-width: 600px) {
-    width: 600px;  
+  @media screen and (min-width: $GrandEcrans) {
+    width: calc(#{$GrandEcrans} - 100px);  
   }
 }
 

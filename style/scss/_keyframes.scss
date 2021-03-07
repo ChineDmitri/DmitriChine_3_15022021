@@ -12,14 +12,6 @@
       }
 }
 
-@mixin decouvrire {
-    @keyframes decouvrire {
-        from { opacity: 0;}
-        to { opacity: 1;}
-        } 
-}
-
-
 @mixin validateur {
     @keyframes validateur {
         from {transform: rotate(0deg);}
@@ -28,10 +20,10 @@
 }
 
 @mixin loader {
-@keyframes loader {
-    0% {opacity: 1; z-index: 3;}
-    75% {opacity: 1; z-index: 3;}
-    100% {opacity: 0; z-index: 3;}
+  @keyframes loader {
+      0% {opacity: 1; z-index: 3;}
+      75% {opacity: 1; z-index: 3;}
+      100% {opacity: 0; z-index: 3;}
   }
 }
 

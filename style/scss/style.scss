@@ -28,7 +28,6 @@ body {
   @include loader;
   .icoWhile {
     .fa-pizza-slice, .fa-hamburger, .fa-cheese, .fa-coffee {
-      // position: absolute;
       opacity: 0;
       animation-name: iLoader;
       animation-duration: 500ms;
@@ -71,7 +70,7 @@ body {
 .iBack {
   font-size: 2vh;
   position: absolute;
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: $GrandEcrans) {
     left: 1vw;
   }
   left: 2vh;
@@ -85,10 +84,9 @@ body {
   position: relative;
   color: $ColorGeoVille;
   font-size: 2.5vh;
-  // margin-right: 3vh;
 }
 
-.iFx {
+.iFx { /* positionement ICONE dans Fonctionnement. */
   position: absolute;
   left: calc(#{$FxAbscisse} * #{$FxCoef} * 1);
   color: #7e7e7e;
@@ -114,7 +112,7 @@ header {
     @include aligncenterblock;
   }
   @media screen and (min-width: $GrandEcrans) {
-    width: $GrandEcrans;
+    width: calc(#{$GrandEcrans} - 100px);
   }
 }
 
@@ -142,7 +140,7 @@ header {
   padding: 2vh 0;
   width: 100%;
   @media screen and (min-width: $GrandEcrans) {
-    width: $GrandEcrans;
+    width: calc(#{$GrandEcrans} - 100px);
   }
   text-align: center;
   @include aligncenterblock;
@@ -211,8 +209,8 @@ header {
 
 .fonctionemment {
   @include aligncenterblock;
-  @media screen and (min-width: 600px) {
-    width: 600px;
+  @media screen and (min-width: $GrandEcrans) {
+    width: calc(#{$GrandEcrans} - 100px);
   }
 }
 
@@ -246,7 +244,6 @@ li {
     color: white;
     padding: 1vh 1.72vh;
     border-radius: 50%;
-    // margin-right: 8vh;
     position: relative;
     left: -1.72vh;
   }
@@ -287,8 +284,8 @@ li {
 }
 
 .divMenuResto {
-  @media screen and (min-width: 600px) {
-    width: $GrandEcrans;
+  @media screen and (min-width: $GrandEcrans) {
+    width: calc(#{$GrandEcrans} - 100px);
     @include aligncenterblock;
   }
   a {
@@ -321,12 +318,6 @@ li {
     border-top-left-radius: 2.5vh;
     border-top-right-radius: 2.5vh;
     transition-duration: 2s;
-    // &:focus {
-    //   object-position: 0 0;
-    // }
-    // &:hover {
-    //   object-position: 0 0;
-    // }
   }
   &:hover img {
     object-position: 1px 1px;
@@ -343,10 +334,6 @@ li {
   right: 2vh;
   top: 2vh;
 }
-
-// .imgCarte {
-
-// }
 
 .discription {
   position: relative;
@@ -369,11 +356,6 @@ footer {
   color: white;
   font-size: 2vh;
   font-weight: 400;
-  img {
-    margin: 3vh;
-    width: 30%;
-    filter: invert(100%);
-  }
 }
 
 .divBlock {
@@ -382,8 +364,8 @@ footer {
   display: flex;
   flex-direction: column;
   @include aligncenterblock;
-  @media screen and (min-width: 600px) {
-    width: 600px;
+  @media screen and (min-width: $GrandEcrans) {
+    width: calc(#{$GrandEcrans} - 100px);
   }
 }
 
